@@ -1,9 +1,10 @@
 <?xml version="1.0"?>
-<package>
+<?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
+<package format="3">
   <name>csm</name>
-  <version>1.0.0</version>
+  <version>0.0.0</version>
   <description>
-    This is a ROS 3rd-party wrapper <a href = "http://www.ros.org/reps/rep-0136.html">(see REP-136 for more detail)</a> of Andrea Censi's CSM package. 
+      This is a ROS 3rd-party wrapper <a href = "http://www.ros.org/reps/rep-0136.html">(see REP-136 for more detail)</a> of Andrea Censi's CSM package. 
 
     From <a href = "http://censi.mit.edu/software/csm/">the official website</a>:
     <ul>
@@ -11,24 +12,17 @@
 
       It is robust enough to be used in industrial prototypes of autonomous mobile robotics, for example at Kuka. CSM is used by a variety of people, though it is hard to keep track because of the open source distribution, especially as packaged in ROS. If you use this software for something cool, let me know.
     </ul>
-  </description>
+    </description>
+  <maintainer email="alexander.karavaev@jetbrains.com">alexander.karavaev</maintainer>
+  <license>TODO: License declaration</license>
 
-  <author>Andrea Censi</author>
-  <license>LGPL</license>
+  <buildtool_depend>ament_cmake</buildtool_depend>
+  <depend>rclcpp</depend>
 
-  <url type="website">http://censi.mit.edu/software/csm</url>
-  <url type="website">http://wiki.ros.org/csm</url>
-  <url type="repository">https://github.com/AndreaCensi/csm</url>
-  <url type="bugtracker">https://github.com/AndreaCensi/csm/issues</url>
-  <maintainer email="130s@2000.jukuin.keio.ac.jp">Isaac I.Y. Saito</maintainer>
-
-  <buildtool_depend>cmake</buildtool_depend>
-  <buildtool_depend>pkg-config</buildtool_depend>
-  <build_depend>libcairo2-dev</build_depend>
-  <build_depend>libgsl</build_depend>
-  <run_depend>libgsl</run_depend>
+  <test_depend>ament_lint_auto</test_depend>
+  <test_depend>ament_lint_common</test_depend>
 
   <export>
-    <build_type>cmake</build_type>
+    <build_type>ament_cmake</build_type>
   </export>
 </package>
