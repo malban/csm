@@ -3,7 +3,6 @@ project(csm)
 
 find_package(ament_cmake REQUIRED)
 
-find_package(rclcpp REQUIRED)
 find_package(Eigen3 REQUIRED)
 
 if(WIN32)
@@ -18,7 +17,6 @@ endif()
 include_directories(
   include
   src
-  ${catkin_INCLUDE_DIRS}
   ${EIGEN3_INCLUDE_DIRS})
 
 set(CSM_SRC
@@ -61,8 +59,6 @@ add_library(${PROJECT_NAME} SHARED
   ${ICP_SRC}
   ${OPTIONS_SRC})
 
-
-
 install(TARGETS ${PROJECT_NAME}
   ARCHIVE DESTINATION lib
   LIBRARY DESTINATION lib
@@ -73,15 +69,10 @@ install(DIRECTORY include
   DESTINATION include/../
 )
 
-install(DIRECTORY resource
-        DESTINATION share/${PROJECT_NAME})
-
 install(DIRECTORY include/gsl_eigen/
   DESTINATION include/../gsl_eigen
 )
 
-
-ament_export_dependencies(rclcpp)
 ament_export_include_directories(include)
 ament_export_libraries(${PROJECT_NAME})
 
