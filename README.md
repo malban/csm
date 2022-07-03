@@ -1,3 +1,5 @@
+## Ported to ROS2 version of csm.
+
 For more information about the C(anonical) Scan Matcher, see the webpage: http://purl.org/censi/2007/csm.
 
 Note: there are two branches on the repository. The "master" branch uses GSL.
